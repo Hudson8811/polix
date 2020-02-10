@@ -1,0 +1,59 @@
+$font1: "Gilroy",
+sans-serif;
+$font2: 'Gotham Pro',
+sans-serif;
+
+a {
+	text-decoration: none;
+}
+
+html,
+body {}
+
+body {
+	margin: 0;
+	color: #3b3b3b;
+	background: #ffffff;
+	font-family: $font1;
+	font-size: 16px;
+}
+
+.container {
+	box-sizing: border-box;
+	width: 1240px;
+	max-width: calc(100% - 32px);
+	margin: 0 auto;
+	margin: 0 auto;
+}
+
+#jGrowl {
+	z-index: 999999;
+}
+
+*:focus {
+	outline: none;
+}
+
+.hide {
+	display: none;
+}
+
+.btn {
+	cursor: pointer;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 10px 24px;
+	border-radius: 6px;
+	font-family: $font2;
+	font-weight: normal;
+	font-size: 16px;
+	line-height: 125%;
+	font-style: normal;
+
+	font-weight: 500;
+	&--blue {
+		color: #FFFFFF;
+		background: #2A68FB;
+	}
+}
