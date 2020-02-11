@@ -4,10 +4,43 @@ header.site-header
 			.sh-burger
 				span
 			a.sh-logo(href="")
-				img(src="../img/logo.svg", alt="")
+				img(src="../img/logo.svg", alt="logo")
 
 			.sh-btn-count-wrap
 				a.btn.btn--blue Отправить КМ на расчет
 
 			a.sh-call-me Заказать звонок
 			a.sh-phone-number + 7 (495) 925 16 61
+			nav#menu
+				ul
+					li
+						a(href="#") О компании
+					li
+						a(href="#") Наша продукция
+					li
+						a(href="#") Услуги
+					li
+						a(href="#") Портфолио
+					li
+						a(href="#") Клиенты
+					li
+						a(href="#") Производство
+					li
+						a(href="#") Обратная связь
+
+	.sh-bot
+		.container.bot-container
+			.sh-presentation
+				.sh-p-left
+					span Производство и монтаж металлоконструкций любой сложности
+					span от #[span(class="sh-big-text") 15 000] руб./т.
+
+				.sh-p-right
+					img(src="../img/coa.svg", alt="icon")
+					.sh-p-right-f
+						span Допуск
+						span сро
+			.sh-strengths
+				+card-item('../img/sh-strengths-item-1.svg', 'Соблюдение сроков', 'Гарантия сроков производства закреплена договором')
+				+card-item('../img/sh-strengths-item-2.svg', 'Без переплат', 'Продукция от производителя без дополнительных наценок')
+				+card-item('../img/sh-strengths-item-3.svg', 'Гарантия качества', 'Контроль качества продукции на всех этапах производства')

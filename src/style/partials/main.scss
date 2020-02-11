@@ -1,4 +1,4 @@
-$font1: "Gilroy",
+$font1: "Geometria",
 sans-serif;
 $font2: 'Gotham Pro',
 sans-serif;
@@ -6,9 +6,6 @@ sans-serif;
 a {
 	text-decoration: none;
 }
-
-html,
-body {}
 
 body {
 	margin: 0;
@@ -24,6 +21,9 @@ body {
 	max-width: calc(100% - 32px);
 	margin: 0 auto;
 	margin: 0 auto;
+	@media screen and (max-width:1367px){
+		max-width: calc(100% - 136px);
+	}
 }
 
 #jGrowl {
