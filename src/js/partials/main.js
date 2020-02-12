@@ -12,8 +12,28 @@ $('.sh-burger').click(function () {
   $('#menu').toggleClass('active')
 });
 
+$('.grid-item').click(function () {
+  $(this).toggleClass('active')
+});
 
-
+$('.responsive').slick({
+  infinite: false,
+  speed: 300,
+  slidesToShow: 3,
+  slidesToScroll: 3,
+  responsive: [
+    {
+      breakpoint: 781,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
 $(document).ready(function () {
   if (document.documentElement.clientWidth < 780) {
     botContainer.append(bluBtn)
@@ -53,7 +73,5 @@ $(document).ready(function () {
       mobBotSpan.innerHTML = `металлокнструкций производим ежемесячно`;
     };
   });
-
-
 });
 
