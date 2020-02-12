@@ -34,8 +34,14 @@ mixin card-item(img, span1, span2)
 				span=span1
 				span=span2
 		
-mixin description-item(s1, s2, s3)
-	.description-item
-		span=s1
-		span.lit-span=s2
-		span=s3
+mixin description-item(s1, s2, s3, mobile)
+	if (mobile)
+		.description-item
+			span=s1
+			span.lit-span.mobile=s2
+			span.bot-span.mobile=s3
+	else
+		.description-item
+			span=s1
+			span.lit-span=s2
+			span.bot-span=s3

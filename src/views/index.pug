@@ -13,15 +13,15 @@ block main
 	.container.mobile-wrapper-for-sh-strengths
 	.container.description-block
 		.item
-			span Поликс Групп - Ваш надежный партнер
+			span Поликс Групп - #[span(class="mobile")] Ваш надежный партнер
 		.item
 			span Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 		.item
 			span.red Разработка комплекта чертежей КМД бесплатно
-			span Заключите с нами договор до 1 марта 2020 года и получите БЕСПЛАТНУЮ разработку проектной документации
+			span Заключите с нами договор до #[div(class="string")] 1 марта 2020 года и получите БЕСПЛАТНУЮ разработку проектной документации
 			a(href="#") Отправить Заявку
 		.description-bottom-block
-			+description-item('10','лет', 'Успешной работы на рынке России')
-			+description-item('430','', 'Выполненных заказов')
-			+description-item('130','т', 'металлокнструкций производим ежемесячно')
-			+description-item('0.12','%', 'Брака при производстве')
+			+description-item('10','лет', 'Успешной работы на рынке России',false)
+			+description-item('430','', 'Выполненных заказов',false)
+			+description-item('130','т', 'металлокнструкций производим ежемесячно', true)
+			+description-item('0.12','%', 'Брака при производстве',false)
