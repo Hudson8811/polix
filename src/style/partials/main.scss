@@ -57,3 +57,137 @@ body {
 		background: #2A68FB;
 	}
 }
+
+.description-block{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-top: 108px;
+	margin-bottom: 104px;
+	.item{
+		flex: 1 0 33%;
+		&:nth-child(1){
+			max-width: 273px;
+			span{
+				font-size: 35px;
+				line-height: 125%;
+				font-weight: 500;
+				color: #2A2D34;
+			}
+		}
+		&:nth-child(2){
+			max-width: 440px;
+			span{
+				font-size: 16px;
+				line-height: 150%;
+				color: #2A2D34;
+			}
+		}
+		&:nth-child(3){
+			max-width: 295px;
+			span{
+				display: block;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 150%;
+			}
+			.red{
+				font-size: 20px;
+				line-height: 125%;
+				font-weight: bold;
+				color: #FF6157;
+				margin-bottom: 34px;
+			}
+			a{
+				position: relative;
+				display: flex;
+				align-items:center;
+				font-weight: bold;
+				font-size: 16px;
+				line-height: 150%;
+				/* or 24px */
+				text-transform: uppercase;
+				/* акцент синий */
+				color: #2A68FB;
+				margin-top: 32px;
+				cursor: pointer;
+				&:after{
+					content: '';
+					background:center / auto url(../img/blue-arrow.svg) no-repeat;
+					width: 22px;
+					height: 8px;
+					margin-left: 12px;
+				}
+			}
+		}
+	}
+	.description-bottom-block{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 88px;
+		border: 15px solid #DEE2EA;
+		box-sizing: border-box;
+		padding: 64px 81px;
+		.description-item{
+			position: relative;
+			flex: 0 0 auto;
+			max-width: 25%;
+			box-sizing: border-box;
+			span{
+				&:nth-child(1){
+					font-weight: 500;
+					font-size: 50px;
+					line-height: 125%;
+					/* or 62px */
+					/* акцент синий */
+					color: #2A68FB;
+				}
+				&.lit-span{
+					font-weight: 500;
+					font-size: 32px;
+					/* акцент синий */
+					color: #2A68FB;
+				}
+				&:nth-child(3){
+					display: block;
+					margin-top: 29px;
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 150%;
+					/* or 24px */
+					/* основной темный */
+					color: #2A2D34;
+				}
+			}
+			&:after{
+				content:'';
+				position: absolute;
+				right: 0;
+				top: 50%;
+				margin-top: -57px;
+				display: block;
+				width: 1px;
+				height: 114px;
+				background: #DEE2EA;
+			}
+			&:nth-child(1){
+				padding-right: 71px;
+			}
+			&:nth-child(2){
+				padding-left: 71px;
+				padding-right: 71px;
+			}
+			&:nth-child(3){
+				padding-left: 71px;
+				padding-right: 70px;
+			}
+			&:last-child{
+				padding-left: 70px;
+				&::after{
+					display: none;
+				}
+			}
+		}
+	}
+}
