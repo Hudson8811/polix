@@ -22,7 +22,7 @@ $(document).ready(function () {
   };
 
   if (document.documentElement.clientWidth < 1080) {
-    phone.innerHTML = '<img src="../img/phone.svg">';
+    phone.innerHTML = '<img src="img/phone.svg">';
   } else {
     phone.innerHTML = `<a class="sh-call-me">Заказать звонок</a>`;
   };
@@ -30,7 +30,7 @@ $(document).ready(function () {
   window.addEventListener("resize", () => {
 
     if (document.documentElement.clientWidth < 1080) {
-      phone.innerHTML = `<img src="../img/phone.svg">`;
+      phone.innerHTML = `<img src="img/phone.svg">`;
     } else {
       phone.innerHTML = `<a class="sh-call-me">Заказать звонок</a>`;
     };
