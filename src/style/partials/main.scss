@@ -419,6 +419,159 @@ h2{
 	}
 }
 
+.project-block{
+	.responsive-2{
+		display: flex;
+		flex-wrap: wrap;
+		margin-left: -10px;
+		margin-right: -10px;
+		align-items:center;
+		justify-content: center;
+		margin-top: 44px;
+		.item{
+			height: 378px;
+			margin: 10px;
+			margin-bottom: 32px;
+			.content-block{
+				height: 100%;
+				width: 250px;
+				background: rgba(26, 30, 41, 0.8);
+				box-sizing: border-box;
+				padding: 64px 40px 48px 32px;
+				.client{
+					font-weight: 500;
+					font-size: 12px;
+					line-height: 125%;
+					/* or 15px */
+
+
+					/* белый */
+
+					color: #FFFFFF;
+					display: block;
+					margin-bottom: 4px;
+				}
+				.name{
+					font-weight: bold;
+					font-size: 16px;
+					line-height: 150%;
+					/* or 24px */
+
+
+					/* голубой */
+
+					color: #00A7FF;
+					display: block;
+				}
+				.work{
+					position: relative;
+					list-style: none;
+					margin: 15px 0;
+					li{
+						display: flex;
+						align-items:center;
+						font-size: 16px;
+						line-height: 180%;
+						/* or 29px */
+						
+						
+						/* белый */
+						
+						color: #FFFFFF;
+						&:before{
+							content: '';
+							display: block;
+							width: 6px;
+							height: 6px;
+							border-radius:3px;
+							background: #00A7FF;
+							margin-right: 11px;
+							flex-shrink: 0;
+						}
+					}
+				}
+				.time{
+					font-size: 16px;
+					line-height: 180%;
+					/* or 29px */
+
+
+					/* белый */
+
+					color: #FFFFFF;
+				}
+				.review{
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 150%;
+					/* or 24px */
+
+
+					/* голубой */
+
+					color: #00A7FF;
+					display: block;
+					margin-top: 65px;
+				}
+			}
+		}
+		.slick-dots{
+			list-style: none;
+			display: flex;
+			justify-content: center;
+			align-items:center;
+			order: 2;
+			li{
+				margin: 15px;
+				display: flex;
+				justify-content: center;
+				align-items:center;
+			}
+			.slick-active{
+				background: left center / auto url(../img/dote.svg) no-repeat;
+				width: 20px;
+				height: 20px;
+				button{
+					background: #2A68FB;
+				}
+			}
+			button{
+				width: 12px;
+				height: 12px;
+				border-radius:6px;
+				padding: 0;
+				border:none;
+				color:transparent;
+				background: #DEE2EA;
+			}
+		}
+		.slick-arrow{
+			bottom: 0;
+			padding: 0;
+			margin: 0;
+			border:none;
+			color:transparent;
+			background: center / auto url(../img/slick-arrow-2.svg) no-repeat;
+			width: 37px;
+			height: 10px;
+			&.slick-disabled{
+				opacity: 0.5;
+			}
+			&.slick-prev{
+				left: 0;
+				transform: rotate(-180deg);
+				order: 1;
+				margin-right: 16px;
+			}
+			&.slick-next{
+				right: 0;
+				order: 3;
+				margin-left: 16px;
+			}
+		}
+	}
+}
+
 
 
 
@@ -513,6 +666,7 @@ h2{
 	}
 	.services-block{
 		justify-content: space-between;
+		margin-bottom: 80px;
 	}
 	.services-block .responsive{
 		padding: 50px 50px 40px 50px;
@@ -524,6 +678,29 @@ h2{
 	.services-block .responsive .slice-item .arrow-link{
 		margin-top: 20px;
 		font-size: 15px;
+	}
+	.project-block .responsive-2{
+		margin-top: 27px;
+		margin-left: -15px;
+		margin-right: -15px;
+		.item{
+			margin: 15px;
+			height: 342px;
+			margin-bottom: 20px;
+			.content-block{
+				width: 245px;
+				padding: 55px 40px 40px 32px;
+				.name{
+					font-size: 15px;
+					line-height: 155%;
+				}
+				.work{
+					li{
+						font-size: 15px;
+					}
+				}
+			}
+		}
 	}
 }
 @media screen and (max-width:1315px){
@@ -826,6 +1003,60 @@ h2{
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
+	}
+	.services-block{
+		margin-bottom: 35px;
+	}
+	.project-block .responsive-2{
+		margin-top: 10px;
+		.slick-next, .slick-prev{
+			position: relative;
+		}
+		.slick-next{
+			transform: rotate(0);
+		}
+	}
+	.project-block .responsive-2 .item{
+		position: relative;
+		height: 197px;
+		margin-bottom: 0;
+		&:before{
+			content: '';
+			display: block;
+			position: absolute;
+			right: 8px;
+			top: 8px;
+			width: 22px;
+			height: 22px;
+			background: center / auto url(../img/more-photo.svg) no-repeat;
+		}
+		.content-block{
+			width: 187px;
+			padding: 24px 20px 24px 12px;
+			.name{
+				font-size: 14px;
+				line-height: 140%;
+			}
+			.work{
+				display: none;
+			}
+			.time{
+				font-size: 13px;
+				line-height: 180%;
+				margin-top: 20px;
+			}
+			.review{
+				font-size: 14px;
+				line-height: 150%;
+				margin-top: 34px;
+			}
+		}
+	}
+	.project-block .responsive-2 .slick-dots{	
+		li{
+			margin: 10px;
+			flex-shrink: 0;
+		}
 	}
 }
 
