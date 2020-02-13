@@ -158,3 +158,52 @@ $(document).ready(function () {
     };
   });
 });
+
+function modalPhone() {
+  event.preventDefault();
+  $.fancybox.open({
+    src: '#modalPhone',
+    type: 'inline'
+  });
+}
+
+function modalKM() {
+  event.preventDefault();
+  $.fancybox.open({
+    src: '#modalKM',
+    type: 'inline'
+  });
+}
+
+function modalFreeKM() {
+  event.preventDefault();
+  $.fancybox.open({
+    src: '#modalFreeKM',
+    type: 'inline'
+  });
+}
+
+
+function modalOrder() {
+  event.preventDefault();
+  $.fancybox.open({
+    src: '#modalOrder',
+    type: 'inline'
+  });
+}
+
+function modalDoc() {
+  event.preventDefault();
+  $.fancybox.open({
+    src: '#modalDoc',
+    type: 'inline'
+  });
+}
+
+function modalProduct() {
+  event.preventDefault();
+  $.fancybox.open({
+    src: '#modalProduct',
+    type: 'inline'
+  });
+}

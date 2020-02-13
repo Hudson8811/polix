@@ -19,7 +19,7 @@ block main
 		.item
 			span.red Разработка комплекта чертежей КМД бесплатно
 			span Заключите с нами договор до #[div(class="string")] 1 марта 2020 года и получите БЕСПЛАТНУЮ разработку проектной документации
-			a(href="#") Отправить Заявку
+			a(href="javascript:;" onclick="modalFreeKM(); return false;" class="fancybox") Отправить Заявку
 
 		.description-bottom-block
 			+description-item('10','лет', 'Успешной работы на рынке России',false)
@@ -34,7 +34,7 @@ block main
 				span.heading Колонны
 				.hover-block
 					span от #[span(class="big") 80 000] руб
-					a(href="#").btn-order Заказать
+					a.btn-order(href="javascript:;" onclick="modalProduct(); return false;" class="fancybox") Заказать
 					a(href="#").btn-details Подробнее
 
 			.grid-item(style="background:center / cover url(images/grid-bag-2.jpg) no-repeat;")
@@ -123,15 +123,15 @@ block main
 			.slice-item
 				img.icon(src="img/icon-1.svg", alt="icon")
 				span #[span(class="red") Бесплатная] разработка комплекта чертежей КМД
-				a.arrow-link(href="#") заказать
+				a.arrow-link(href="javascript:;" onclick="modalFreeKM(); return false;" class="fancybox") заказать
 			.slice-item
 				img.icon(src="img/icon-2.svg", alt="icon")
 				span #[span(class="red") Бесплатная] анализ вашей проектной документации
-				a.arrow-link(href="#") заказать
+				a.arrow-link(href="javascript:;" onclick="modalDoc(); return false;" class="fancybox") заказать
 			.slice-item
 				img.icon(src="img/icon-3.svg", alt="icon")
 				span #[span(class="red") Бесплатная] выезд замерщика 
-				a.arrow-link(href="#") отправить заявку
+				a.arrow-link(href="javascript:;" onclick="modalOrder(); return false;" class="fancybox") отправить заявку
 	.container.project-block
 		h2 Реализованные проекты
 		.responsive-2
