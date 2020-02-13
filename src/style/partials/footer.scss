@@ -1,0 +1,111 @@
+footer{
+  margin-top: 64px;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    span{
+      &:nth-child(2){
+        margin-left: -15px;
+      }
+    }
+  }
+  background: #F0F3F8;
+  img{
+    display: block;
+    width: 230px;
+    flex-shrink: 0;
+  }
+  span{
+    font-size: 16px;
+    line-height: 20px;
+
+    /* icons */
+
+    color: #6C7486;
+  }
+  .phone-link-footer{
+    font-family: Gotham Pro;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 125%;
+    /* or 19px */
+
+
+    /* голубой */
+
+    color: #00A7FF;
+  }
+  .mobile-hide{display: none;}
+}
+
+@media screen and (max-width:1367px){
+  footer .container span:nth-child(2){
+    margin-left: 0;
+  }
+  footer{
+    margin-top: 58px;
+    .container{
+      padding: 5px 0;
+    }
+    img{
+      width: 194px;
+    }
+    span{
+      font-size: 15px;
+      line-height: 19px;
+    }
+  } 
+  footer .phone-link-footer{
+    font-size: 15px;
+    line-height: 125%;
+  }
+  
+}
+@media screen and (max-width:1080px){
+  footer{
+    span{
+      display: none;
+      font-size: 14px;
+      line-height: 18px;
+    }
+    .phone-link-footer{
+      font-size: 14px;
+      line-height: 18px;
+      display: flex;
+      align-items: center;
+      &::before{
+        content:'';
+        flex-shrink: 0;
+        display: block;
+        width: 18px;
+        height: 18px;
+        margin-right: 7px;
+        background: center / cover url(../img/blue-phone.svg) no-repeat;
+      }
+    }
+    .mobile-hide{
+      display: block;
+    }
+  }  
+}
+
+@media screen and (max-width:580px){
+  footer{
+    margin-top: 75px;
+    padding: 20px 0;
+    .logo{
+      display: none;
+    }
+  } 
+}
+
+@media screen and (max-width:350px){
+footer{
+  .container{
+    flex-direction: column;
+    span{margin-bottom: 20px;}
+  }
+}
+}
