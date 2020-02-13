@@ -1244,3 +1244,12 @@ h2{
 		padding: 10px;
 	}
 }
+
+@media screen and (max-width:350px){
+	.project-block .responsive-2 .slick-dots{
+		display: none;
+	}
+	.project-block .responsive-2 .slick-arrow{
+		margin-top: 20px;
+	}
+}
