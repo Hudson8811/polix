@@ -5,10 +5,24 @@
 	@media screen and (max-width:1367px){
 		padding-bottom: 80px;
 	}
+	.btn.btn--blue.mobile-hide{
+		display: none;
+		@media screen and (max-width:780px){
+			display: inline-flex;
+		}
+	}
+	.btn.btn--blue{
+		display: none;
+	}
 }
 
 .sh-top {
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+	transition: all 0.3s;
 	.container {
 		display: flex;
 		align-items: center;
@@ -18,8 +32,46 @@
 			min-height: 72px;
 		}
 	}
+	&.fix{
+		z-index: 100;
+		background:#fff;
+		box-shadow: 0px 4px 15px rgba(159, 162, 186, 0.2);
+		.sh-burger{
+			span{
+				background: #6C7486;
+				&:after,&:before{
+					background: #6C7486;	
+				}
+			}
+		}
+		.sh-call-me{
+			svg{
+				path{
+					fill: #6C7486!important;
+				}	
+			}
+		}
+		.sh-phone-number{
+			color: #6C7486;
+		}
+		@media screen and (max-width:780px){
+			.sh-logo{
+				display: none;
+			}
+			.btn.btn--blue{
+				display: inline-flex;
+				font-size: 14px;
+				padding: 10px 16px;
+			}
+		}
+	}
 }
-
+.sh-bot{
+	padding-top: 82px;
+	@media screen and (max-width:1367px){
+		padding-top: 70px;
+	}
+}
 
 .sh-burger {
 	position: relative;
@@ -100,6 +152,12 @@
 	font-size: 16px;
 	line-height: 125%;
 	font-style: normal;
+	svg{
+		path{
+			fill:white;
+		}
+		
+	}
 	@media screen and (max-width:1080px){
 		margin-right: 0;
 	}
@@ -286,6 +344,9 @@
 }
 
 @media screen and (max-width:780px){
+	.sh-bot{
+		padding-top: 63px;
+	}
 	.container{
 		max-width: calc(100% - 32px);
 	}
@@ -310,7 +371,6 @@
 				left: 50%;
 				width: 30px;
 				margin-left: -15px;
-				background-color: #fff;
 		}
 		}
 		.sh-presentation {
