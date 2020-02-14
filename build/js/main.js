@@ -216,3 +216,35 @@ $(function () {
       $('.sh-top').removeClass('fix');
   });
 });
+var fileInpWrap = $('.file-input-wrap');
+if (fileInpWrap.length > 0) {
+  fileInpWrap.each(function () {
+    var surveyUploadFileInput = $(this).find('.survey__file');
+    var jqUploadedInput = $(this).find(".survey__file-upload-choosed");
+    var plusBB = $(this).find(".plus-btn-block");
+    var jqLabel = $(this).find(".survey__file-upload");
+
+
+    surveyUploadFileInput.change(function (e) {
+      var targetValue = surveyUploadFileInput[0].files[0].name;
+      jqUploadedInput.html('<span>' + targetValue + '</span><div class="survey__file-upload-close-btn"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.2847 15.1421L1.14258 1" stroke="#2a68fb"/><path d="M1.00044 15.1421L15.1426 1" stroke="#2a68fb"/></svg></div> ');
+
+      if (jqUploadedInput.hasClass("survey__file-upload-choosed-show") || surveyUploadFileInput[0].value === "") {
+
+      }
+      else {
+        jqUploadedInput.toggleClass("survey__file-upload-choosed-show");
+        plusBB.toggleClass("survey__file-upload-hide");
+      }
+    });
+
+    jqUploadedInput.on("click", ".survey__file-upload-close-btn", function () {
+      if (jqUploadedInput.hasClass("survey__file-upload-choosed-show")) {
+        surveyUploadFileInput.value = "";
+
+        jqUploadedInput.toggleClass("survey__file-upload-choosed-show");
+        plusBB.toggleClass("survey__file-upload-hide");
+      }
+    });
+  });
+}

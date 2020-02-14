@@ -16,15 +16,21 @@ div(id="modalPhone" class="modal-fancy modalPhone" style="display:none")
 
 
 div(id="modalKM" class="modal-fancy modalKM" style="display:none")
-  h3 Отправить КМ на расчет 
+  h3 Отправить КМ на расчет
   form
     .form-input
       input(type="text" placeholder="Имя")
     .form-input
       input(type="text" placeholder="Номер телефона")
-    .plus-btn-block
-      button +
-      span Прикрепить техническое задание
+    .file-input-wrap
+      label.survey__file-upload
+        span.wpcf7-form-control-wrap.survey-file
+          input.wpcf7-form-control.wpcf7-file.survey__file(type='file' name='survey-file' size='40')
+
+        .plus-btn-block
+          .plus-btn-block-btn +
+          span Прикрепить техническое задание
+      .survey__file-upload-choosed
     .check-block
       .check
         input(type="checkbox")
@@ -36,7 +42,7 @@ div(id="modalKM" class="modal-fancy modalKM" style="display:none")
 
 
 div(id="modalFreeKM" class="modal-fancy modalFreeKM" style="display:none")
-  h3 Бесплатная разработка комплекта чертежей КМД 
+  h3 Бесплатная разработка комплекта чертежей КМД
   form
     .form-input
       input(type="text" placeholder="Имя")
@@ -44,9 +50,19 @@ div(id="modalFreeKM" class="modal-fancy modalFreeKM" style="display:none")
       input(type="text" placeholder="Номер телефона")
     .form-input
       input(type="text" placeholder="Email")
-    .plus-btn-block
-      button +
-      span Прикрепить техническое задание
+
+
+    .file-input-wrap
+      label.survey__file-upload
+        span.wpcf7-form-control-wrap.survey-file
+          input.wpcf7-form-control.wpcf7-file.survey__file(type='file' name='survey-file' size='40')
+
+        .plus-btn-block
+          .plus-btn-block-btn +
+          span Прикрепить техническое задание
+      .survey__file-upload-choosed
+
+
     .check-block
       .check
         input(type="checkbox")
@@ -78,7 +94,7 @@ div(id="modalOrder" class="modal-fancy modalOrder" style="display:none")
       input.button(type="button" value="Заказать")
 
 div(id="modalDoc" class="modal-fancy modalDoc" style="display:none")
-  h3 Заказать бесплатный анализ вашей проектной документации 
+  h3 Заказать бесплатный анализ вашей проектной документации
   form
     .form-input
       input(type="text" placeholder="Имя")
@@ -86,9 +102,15 @@ div(id="modalDoc" class="modal-fancy modalDoc" style="display:none")
       input(type="text" placeholder="Номер телефона")
     .form-input
       input(type="text" placeholder="Email")
-    .plus-btn-block
-      button +
-      span Прикрепить проект
+    .file-input-wrap
+      label.survey__file-upload
+        span.wpcf7-form-control-wrap.survey-file
+          input.wpcf7-form-control.wpcf7-file.survey__file(type='file' name='survey-file' size='40')
+
+        .plus-btn-block
+          .plus-btn-block-btn +
+          span Прикрепить техническое задание
+      .survey__file-upload-choosed
     .check-block
       .check
         input(type="checkbox")
@@ -101,16 +123,13 @@ div(id="modalDoc" class="modal-fancy modalDoc" style="display:none")
 
 div(id="modalProduct" class="modal-fancy modalProduct" style="display:none")
   .img
-    img(src="images/modal-prod.jpg", alt="product")
+    img(src="images/modal-prod.jpg" alt="product")
   .wrapp
-    h3 Лестницы 
+    h3 Лестницы
     span.price от #[span(class="big") 80 000] руб.
     span.text Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
     ul
       li • Sunt in culpa qui officia deserunt mollit anim id est laborum.
       li • Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.
-      li • Incididunt ut labore et dolore magna aliqua. 
+      li • Incididunt ut labore et dolore magna aliqua.
     span.text Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-    
-
-
