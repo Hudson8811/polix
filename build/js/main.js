@@ -208,6 +208,22 @@ function modalProduct() {
   });
 }
 
+function modalReview() {
+  event.preventDefault();
+  $.fancybox.open({
+    src: '#modalReview',
+    type: 'inline'
+  });
+}
+
+function modalPolit() {
+  event.preventDefault();
+  $.fancybox.open({
+    src: '#modalPolit',
+    type: 'inline'
+  });
+}
+
 $(function () {
   $(window).scroll(function () {
     if ($(this).scrollTop() > 70)

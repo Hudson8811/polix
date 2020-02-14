@@ -1777,7 +1777,7 @@ line-height: 140%;
 				margin-bottom: 24px;
 			}
 			.form-input input[type=button]{
-				padding-right: 42px;
+				padding-right: 73px;
 			}
 			.form-button:after{
 				right: 43px;
@@ -1809,7 +1809,14 @@ line-height: 140%;
 	}
 }
 
-@media screen and (max-width:350px){
+@media screen and (max-width:360px){
+	.map-block .from-block .form-input input[type=button]{
+		padding-right: 83px;
+		font-size: 13px;
+	}
+	.map-block .from-block .form-button:after{
+		right: 30px;
+	}
 	.project-block .responsive-2 .slick-dots{
 		display: none;
 	}
