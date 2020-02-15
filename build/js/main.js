@@ -68,7 +68,7 @@ $('.responsive-2').slick({
   speed: 300,
   slidesToShow: 2,
   slidesToScroll: 2,
-  autoplay: true,
+  autoplay: false,
   arrow: true,
   dots: true,
   responsive: [
@@ -264,3 +264,21 @@ if (fileInpWrap.length > 0) {
     });
   });
 }
+
+
+
+
+// $(document).ready(function() {
+//   const circle = document.querySelector('.progress-ring__circle');
+//   const radius = circle.r.baseVal.value;
+//   const circumference = 2 * Math.PI * radius;
+//   circle.style.strokeDasharray = `${circumference} ${circumference}`;
+//   circle.style.strokeDashoffset = circumference;
+
+//   $('.responsive-2').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+//     percent = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+//     const offset = circumference - percent / 100 * circumference;
+//     circle.style.strokeDashoffset = offset;
+//   });
+
+// });
