@@ -119,15 +119,6 @@ $('.responsive-3').slick({
 });
 
 $(document).ready(function () {
-  if (document.documentElement.clientWidth < 780) {
-    mobWrapper.append(shStrengths)
-    mobLitSpan.innerHTML = `т/мес`;
-    mobBotSpan.innerHTML = `продукции производим`;
-  } else {
-    botContainer.append(shStrengths)
-    mobLitSpan.innerHTML = `т`;
-    mobBotSpan.innerHTML = `металлокнструкций производим ежемесячно`;
-  };
 
   if (document.documentElement.clientWidth < 1080) {
     phone.innerHTML = `<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -145,16 +136,6 @@ $(document).ready(function () {
       </svg>`;
     } else {
       phone.innerHTML = `Заказать звонок`;
-    };
-
-    if (document.documentElement.clientWidth < 780) {
-      mobWrapper.append(shStrengths)
-      mobLitSpan.innerHTML = `т/мес`;
-      mobBotSpan.innerHTML = `продукции производим`;
-    } else {
-      botContainer.append(shStrengths)
-      mobLitSpan.innerHTML = `т`;
-      mobBotSpan.innerHTML = `металлокнструкций производим ежемесячно`;
     };
   });
 });
@@ -268,17 +249,31 @@ if (fileInpWrap.length > 0) {
 
 
 
-// $(document).ready(function() {
-//   const circle = document.querySelector('.progress-ring__circle');
-//   const radius = circle.r.baseVal.value;
-//   const circumference = 2 * Math.PI * radius;
-//   circle.style.strokeDasharray = `${circumference} ${circumference}`;
-//   circle.style.strokeDashoffset = circumference;
+$(document).ready(function () {
+  const cercleWrapp = document.querySelector('.progress-ring')
+  const circle = cercleWrapp.querySelector('.progress-ring__circle');
+  const radius = circle.r.baseVal.value;
+  const circumference = 2 * Math.PI * radius;
+  const responsive2 = document.querySelector('.responsive-2')
+  const clickDots = responsive2.querySelector('.slick-dots')
+  let slickActive = clickDots.querySelector('.slick-active')
+  circle.style.strokeDasharray = `${circumference} ${circumference}`;
+  circle.style.strokeDashoffset = circumference;
 
-//   $('.responsive-2').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-//     percent = ( (nextSlide) / (slick.slideCount-1) ) * 100;
-//     const offset = circumference - percent / 100 * circumference;
-//     circle.style.strokeDashoffset = offset;
-//   });
+  $('.responsive-2').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+    cercleWrapp.style.display = 'none';
+  });
 
-// });
+  $('.responsive-2').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+    cercleWrapp.style.display = 'block';
+    slickActive = clickDots.querySelector('.slick-active')
+    slickActive.append(cercleWrapp)
+    percent = ((currentSlide) / (slick.slideCount - 1)) * 100;
+    const offset = circumference - percent / 100 * circumference;
+    function inOffset(offset) {
+      circle.style.strokeDashoffset = offset
+    }
+    setTimeout(inOffset, 0, offset)
+  });
+
+});

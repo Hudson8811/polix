@@ -22,10 +22,22 @@ block main
 			a(href="javascript:;" onclick="modalFreeKM(); return false;" class="fancybox") Отправить Заявку
 
 		.description-bottom-block
-			+description-item('10','лет', 'Успешной работы на рынке России',false)
-			+description-item('430','', 'Выполненных заказов',false)
-			+description-item('130','т', 'металлокнструкций производим ежемесячно', true)
-			+description-item('0.12','%', 'Брака при производстве',false)
+			.description-item
+				span 10
+				span.lit-span лет
+				span.bot-span Успешной работы на рынке России
+			.description-item
+				span 430
+				span.lit-span
+				span.bot-span Выполненных заказов
+			.description-item
+				span 130
+				span.lit-span т#[span(class="mobile-vis lit-span") /мес]
+				span.bot-span #[span(class="mobile-hide bot-span") металлокнструкций] #[span(class="mobile-vis bot-span") продукции] производим #[span(class="mobile-hide bot-span bot-span-2") ежемесячно]
+			.description-item
+				span 0.12
+				span.lit-span %
+				span.bot-span Брака при производстве
 
 	.container.production-block
 		h2 Наша продукция
@@ -162,7 +174,7 @@ block main
 						li Монтаж
 					.time Срок: 4 месяца
 					a.review(href="javascript:;" onclick="modalReview(); return false;" class="fancybox") Отзыв клиента
-			.item(style="background:center / cover url(images/slick-1.jpg) no-repeat;")
+			.item(style="background:center / cover url(images/slick-1.jpg) no-repeat;" class="mobile-hide")
 				.content-block
 					p.client Клиент
 					span.name Салон Mercedes-Benz в Раменском
@@ -171,7 +183,7 @@ block main
 						li Монтаж
 					.time Срок: 4 месяца
 					a.review(href="javascript:;" onclick="modalReview(); return false;" class="fancybox") Отзыв клиента
-			.item(style="background:center / cover url(images/slick-1.jpg) no-repeat;")
+			.item(style="background:center / cover url(images/slick-1.jpg) no-repeat;" class="mobile-hide")
 				.content-block
 					p.client Клиент
 					span.name Салон Mercedes-Benz в Раменском
@@ -180,7 +192,7 @@ block main
 						li Монтаж
 					.time Срок: 4 месяца
 					a.review(href="javascript:;" onclick="modalReview(); return false;" class="fancybox") Отзыв клиента
-			.item(style="background:center / cover url(images/slick-1.jpg) no-repeat;")
+			.item(style="background:center / cover url(images/slick-1.jpg) no-repeat;" class="mobile-hide")
 				.content-block
 					p.client Клиент
 					span.name Салон Mercedes-Benz в Раменском
@@ -189,7 +201,7 @@ block main
 						li Монтаж
 					.time Срок: 4 месяца
 					a.review(href="javascript:;" onclick="modalReview(); return false;" class="fancybox") Отзыв клиента
-			.item(style="background:center / cover url(images/slick-1.jpg) no-repeat;")
+			.item(style="background:center / cover url(images/slick-1.jpg) no-repeat;" class="mobile-hide")
 				.content-block
 					p.client Клиент
 					span.name Салон Mercedes-Benz в Раменском
@@ -198,8 +210,8 @@ block main
 						li Монтаж
 					.time Срок: 4 месяца
 					a.review(href="javascript:;" onclick="modalReview(); return false;" class="fancybox") Отзыв клиента
-	//- svg.progress-ring(width="20" height="20")
-	//- 	circle.progress-ring__circle(stroke="#2A68FB" stroke-width="2" cx="10" cy="10" r="6" fill="transparent") 	
+	svg.progress-ring(width="22" height="22")
+		circle.progress-ring__circle(stroke="#2A68FB" stroke-width="2" cx="11" cy="11" r="7" fill="transparent") 	
 	.brand-block
 		.container
 			.responsive-3

@@ -205,7 +205,7 @@ h2{
 					/* акцент синий */
 					color: #2A68FB;
 				}
-				&:nth-child(3){
+				&:nth-child(3), .bot-span{
 					display: block;
 					margin-top: 15px;
 					font-weight: 500;
@@ -215,6 +215,21 @@ h2{
 					/* основной темный */
 					color: #2A2D34;
 				}
+				.bot-span-2{
+					display: inline;
+				}
+				.mobile-vis{
+					display: none;
+					@media screen and (max-width:780px){
+						display: inline;
+					}
+				}
+				@media screen and (max-width:780px){
+					.mobile-hide{
+						display: none;
+					}
+				}
+				
 			}
 			&:after{
 				content:'';
@@ -528,16 +543,14 @@ h2{
 				align-items:center;
 			}
 			.slick-active{
-				background: left center / auto url(../img/dote.svg) no-repeat;
-				width: 20px;
-				height: 20px;
 				button{
 					background: #2A68FB;
 				}
 			}
+			
 			button{
-				width: 12px;
-				height: 12px;
+				width: 10px;
+				height: 10px;
 				border-radius:6px;
 				padding: 0;
 				border:none;
@@ -571,7 +584,9 @@ h2{
 		}
 	}
 }
-
+.progress-ring{
+	position: absolute;
+}
 .brand-block{
 	background: #F0F3F8;
 	margin-top: 90px;
@@ -1041,7 +1056,7 @@ color: #2A2D34;
 			padding: 41px 73px;
 			border: 12px solid #DEE2EA;
 			.description-item{
-				span{
+			>	span{
 					&:nth-child(1){
 						font-size: 45px;
 					}
@@ -1825,6 +1840,12 @@ line-height: 140%;
 	}
 	.map-block .map .info-block .info-wrap .item a, .map-block .map .info-block .info-wrap .item span{
 		font-size: 13px;
+	}
+}
+
+@media screen and (max-width:340px){
+	.description-block .description-bottom-block .description-item > span:nth-child(1){
+		font-size: 24px;
 	}
 }
 
