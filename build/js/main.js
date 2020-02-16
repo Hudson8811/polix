@@ -76,7 +76,7 @@ $('.responsive-2').slick({
       breakpoint: 781,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 2
       }
     },
     // You can unslick at a given breakpoint now by adding:
