@@ -11,9 +11,12 @@
 			display: inline-flex;
 		}
 	}
-	.btn.btn--blue{
-		display: none;
+	@media screen and (max-width:780px){
+		.btn.btn--blue{
+			display: none;
+		}
 	}
+	
 }
 
 .sh-top {

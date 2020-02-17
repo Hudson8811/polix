@@ -543,14 +543,17 @@ h2{
 				align-items:center;
 			}
 			.slick-active{
+				position: relative;
+				width: 22px;
+				height: 22px;
 				button{
 					background: #2A68FB;
 				}
 			}
 			
 			button{
-				width: 10px;
-				height: 10px;
+				width: 12px;
+				height: 12px;
 				border-radius:6px;
 				padding: 0;
 				border:none;
@@ -1453,7 +1456,9 @@ color: #2A2D34;
 }
 
 @media screen and (max-width:780px){
-	
+	.production-block .grid-block{
+		margin-top: 23px;
+	}
 	.description-block{
 		margin-top: 30px;
 		margin-bottom: 50px;
@@ -1709,16 +1714,26 @@ color: #2A2D34;
 	}
 	.project-block .responsive-2 .slick-dots{	
 		li{
-			margin: 10px;
+			margin:18px 12px;
 			flex-shrink: 0;
 		}
+	}
+	.project-block .responsive-2 .slick-dots li{
+		margin: 18px 10px;
+	}
+	.project-block .responsive-2 .slick-arrow.slick-prev{
+		margin-left: 0;
+		margin-right: 4px;
+	}
+	.project-block .responsive-2 .slick-arrow.slick-next{
+		margin-left: 4px;
 	}
 
 	.brand-block{
 		background:#fff;
 		margin-top: 0px;
 		margin-bottom: 0;
-		padding-top: 53px;
+		padding-top: 35px;
 		padding-bottom: 60px;
 		.container{
 			position: static;
