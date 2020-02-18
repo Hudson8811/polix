@@ -26,6 +26,12 @@ tpl:'<div class="fancybox-share"><h1>{{SHARE}}</h1><p><a class="fancybox-share__
 
 /* my scripts */
 
+$(document).ready(function () {
+  $(".js-mask").mask(" +7 (999) 999-99-99");
+
+});
+
+
 const phone = document.querySelector('.sh-call-me');
 const bluBtn = document.querySelector('.btn--blue');
 const bluBtnDefault = document.querySelector('.sh-btn-count-wrap');
