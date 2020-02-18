@@ -228,6 +228,27 @@
 .modalProduct {
   max-width: 1240px;
 
+  .form-input .button{
+    background:#2a68fb ;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    /* or 24px */
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border-radius: 6px;
+    margin-top: 48px;
+    cursor: pointer;
+
+    /* белый */
+
+    color: #FFFFFF;
+    max-width: 183px;
+    height: 48px;
+  }
   .img {
     width: 100%;
     height: 383px;
